@@ -1,16 +1,40 @@
-# React + Vite
+# Send It 🧗
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, minimal route tracker for rock climbers. Log your climbs, manage projects, and track your sends — all in one place.
 
-Currently, two official plugins are available:
+## Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[https://cs571-s26.github.io/p75/](https://cs571-s26.github.io/p75/)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Log climbing routes with grade, style, and notes
+- Mark routes as Unclimbed, Project, or Sent
+- Filter routes by status
+- Live stats that update as you track
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React + Vite
+- React Router
+- React Bootstrap
+- Barlow / Barlow Condensed (via Fontsource)
+
+## Running Locally
+
+```bash
+git clone https://github.com/CS571-S26/p75.git
+cd p75
+npm install
+npm run dev
+```
+
+Then open [http://localhost:5173](http://localhost:5173).
+
+## Building for Production
+
+```bash
+npm run build
+```
+
+Output goes to the `docs/` folder for GitHub Pages deployment.
