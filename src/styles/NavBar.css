@@ -1,0 +1,86 @@
+/* ─── Navbar Shell ───────────────────────────────────────────────────────────*/
+
+.sendit-navbar {
+  background: var(--surface) !important;
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+}
+
+.navbar-inner {
+  padding: 0 var(--space-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ─── Brand ──────────────────────────────────────────────────────────────────*/
+
+.navbar-brand-custom {
+  font-family: var(--font-display) !important;
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent) !important;
+  padding: 14px 0;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.brand-slash {
+  color: var(--text);
+  opacity: 0.25;
+  font-weight: 400;
+}
+
+/* ─── Nav Links ──────────────────────────────────────────────────────────────*/
+
+.nav-link-custom {
+  font-family: var(--font-display) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted) !important;
+  padding: 6px 16px !important;
+  border-radius: 999px;
+  margin: 0 2px;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.nav-link-custom:hover {
+  color: var(--text) !important;
+  background: var(--surface2);
+}
+
+.nav-link-custom.active {
+  color: var(--accent) !important;
+  background: rgba(200, 240, 74, 0.08);
+}
+
+/* ─── Mobile Toggle ──────────────────────────────────────────────────────────*/
+
+.navbar-toggle-custom {
+  border-color: var(--border) !important;
+  padding: 6px 10px;
+}
+
+.navbar-toggle-custom .navbar-toggler-icon {
+  filter: invert(0.6);
+}
+
+/* ─── Mobile Collapse ────────────────────────────────────────────────────────*/
+
+@media (max-width: 767px) {
+  .navbar-collapse {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: var(--space-sm) 0;
+  }
+
+  .nav-link-custom {
+    padding: 10px var(--space-md) !important;
+    border-radius: var(--radius);
+    margin: 2px var(--space-sm);
+  }
+}

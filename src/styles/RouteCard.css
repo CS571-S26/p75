@@ -1,0 +1,171 @@
+/* ─── Card Shell ─────────────────────────────────────────────────────────────*/
+
+.route-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+  animation: cardIn 0.35s ease both;
+}
+
+/* Colored top accent bar driven by status */
+.route-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--border);
+  transition: background var(--transition);
+}
+
+.route-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Status-driven accent colors */
+.route-card.status-completed::before { background: var(--grade-green); }
+.route-card.status-completed:hover   { border-color: var(--grade-green); }
+
+.route-card.status-project::before   { background: var(--accent); }
+.route-card.status-project:hover     { border-color: var(--accent); }
+
+.route-card.status-unclimbed::before { background: var(--border); }
+.route-card.status-unclimbed:hover   { border-color: var(--muted); }
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Top Row ────────────────────────────────────────────────────────────────*/
+
+.card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.card-name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text);
+  line-height: 1.2;
+  flex: 1;
+}
+
+.grade-badge {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 3px 10px;
+  border-radius: var(--radius);
+  color: #0f1210;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* ─── Meta Row ───────────────────────────────────────────────────────────────*/
+
+.card-meta {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.tag {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: var(--radius);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.color-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ─── Notes ──────────────────────────────────────────────────────────────────*/
+
+.card-notes {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+  font-style: italic;
+  border-left: 2px solid var(--border);
+  padding-left: 10px;
+  margin: 0;
+}
+
+/* ─── Status Row ─────────────────────────────────────────────────────────────*/
+
+.status-row {
+  display: flex;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.status-btn {
+  flex: 1;
+  padding: 7px 4px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: transparent;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.status-btn:hover {
+  border-color: var(--text);
+  color: var(--text);
+}
+
+/* Active states */
+.status-btn.active-unclimbed {
+  background: var(--surface2);
+  border-color: var(--muted);
+  color: var(--text);
+}
+
+.status-btn.active-project {
+  background: rgba(200, 240, 74, 0.12);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.status-btn.active-completed {
+  background: rgba(74, 240, 122, 0.12);
+  border-color: var(--grade-green);
+  color: var(--grade-green);
+}
