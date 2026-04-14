@@ -6,22 +6,18 @@ import "../styles/HomePage.css";
 
 const FEATURES = [
   {
-    icon: "🪨",
     title: "Log Your Climbs",
     description: "Track every route you've attempted. Add grades, styles, and notes to build your climbing history.",
   },
   {
-    icon: "⟳",
     title: "Manage Projects",
     description: "Mark routes as projects to keep tabs on what you're working toward. Never lose track of a climb again.",
   },
   {
-    icon: "✓",
     title: "Track Your Sends",
     description: "Celebrate every send. Watch your completed routes stack up and see your progress over time.",
   },
   {
-    icon: "⚡",
     title: "Filter & Find",
     description: "Filter by grade, style, or status to quickly find the routes that match your session goals.",
   },

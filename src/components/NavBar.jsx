@@ -18,21 +18,23 @@ export default function NavBar() {
         {/* Links */}
         <Navbar.Collapse id="main-nav">
           <Nav className="ms-auto">
-            <Nav.Link
-              as={NavLink}
+            <NavLink
               to="/"
               end
-              className={({ isActive }) => isActive ? "nav-link-custom active" : "nav-link-custom"}
+              className={({ isActive }) =>
+                isActive ? "nav-link nav-link-custom active" : "nav-link nav-link-custom"
+              }
             >
               Home
-            </Nav.Link>
-            <Nav.Link
-              as={NavLink}
+            </NavLink>
+            <NavLink
               to="/tracker"
-              className={({ isActive }) => isActive ? "nav-link-custom active" : "nav-link-custom"}
+              className={({ isActive }) =>
+                isActive ? "nav-link nav-link-custom active" : "nav-link nav-link-custom"
+              }
             >
               My Routes
-            </Nav.Link>
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
 

@@ -1,0 +1,211 @@
+/* ─── ADD ROUTE FORM CONTAINER ───────────────────────────────────────────────*/
+
+.add-route-form-container {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.add-route-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ─── FORM HEADER ────────────────────────────────────────────────────────────*/
+
+.form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.form-close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--muted);
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.form-close-btn:hover {
+  background: var(--bg-subtle);
+  color: var(--text);
+}
+
+/* ─── FORM BODY ──────────────────────────────────────────────────────────────*/
+
+.form-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Full width for name and notes */
+.form-group:first-child,
+.form-group:last-child {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.required {
+  color: var(--accent);
+}
+
+/* ─── FORM INPUTS ────────────────────────────────────────────────────────────*/
+
+.form-input,
+.form-select,
+.form-textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.9375rem;
+  font-family: inherit;
+  transition: all 0.15s ease;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(74, 144, 240, 0.1);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--muted);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* ─── COLOR INPUT ────────────────────────────────────────────────────────────*/
+
+.color-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.form-color-input {
+  width: 60px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  background: none;
+}
+
+.form-color-input::-webkit-color-swatch-wrapper {
+  padding: 4px;
+}
+
+.form-color-input::-webkit-color-swatch {
+  border: none;
+  border-radius: 4px;
+}
+
+.color-value {
+  font-size: 0.875rem;
+  color: var(--muted);
+  font-family: ui-monospace, monospace;
+}
+
+/* ─── FORM ACTIONS ───────────────────────────────────────────────────────────*/
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding-top: 8px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(74, 144, 240, 0.3);
+}
+
+.btn-secondary {
+  background: var(--bg-subtle);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--border);
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────────────────────*/
+
+@media (max-width: 640px) {
+  .form-body {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-group:first-child,
+  .form-group:last-child {
+    grid-column: 1;
+  }
+
+  .add-route-form-container {
+    padding: 16px;
+  }
+
+  .form-title {
+    font-size: 1.25rem;
+  }
+}

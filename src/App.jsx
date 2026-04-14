@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useRoutes } from "./hooks/useRoutes";
 import NavBar from "./components/NavBar";
 import HomePage from "./components/HomePage";
@@ -10,12 +10,14 @@ export default function App() {
   const routeState = useRoutes();
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <NavBar />
       <div className="app">
         <Routes>
+          <Route index element={<HomePage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/tracker" element={<TrackerPage routeState={routeState} />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
     </BrowserRouter>

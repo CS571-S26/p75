@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   gap: 0;
+  padding-inline: clamp(16px, 4vw, 40px);
   padding-bottom: 100px;
 }
 
@@ -38,6 +39,32 @@
 }
 
 /* ─── Stats ──────────────────────────────────────────────────────────────────*/
+
+.tracker-header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.add-route-btn {
+  padding: 10px 20px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.add-route-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(74, 144, 240, 0.3);
+}
 
 .tracker-stats {
   display: flex;
