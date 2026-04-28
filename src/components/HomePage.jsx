@@ -51,7 +51,7 @@ export default function HomePage() {
       {/* Features */}
       <section className="features">
         <Container fluid>
-          <div className="features-label">What you get</div>
+          <h2 className="features-label">What you get</h2>
           <Row className="features-grid">
             {FEATURES.map((f) => (
               <Col key={f.title} xs={12} sm={6} lg={3} className="feature-col">
@@ -68,7 +68,7 @@ export default function HomePage() {
 
       {/* How it works */}
       <section className="how-it-works">
-        <div className="hiw-label">How it works</div>
+        <h2 className="hiw-label">How it works</h2>
         <div className="hiw-steps">
           <div className="hiw-step">
             <div className="hiw-num">01</div>

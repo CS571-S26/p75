@@ -1,0 +1,26 @@
+/* ─── STATUS BADGE ───────────────────────────────────────────────────────────*/
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-unclimbed {
+  background: var(--bg-subtle);
+  color: var(--muted);
+}
+
+.status-project {
+  background: rgba(250, 204, 21, 0.15);
+  color: #facc15;
+}
+
+.status-completed {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}

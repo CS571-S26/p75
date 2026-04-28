@@ -2,7 +2,9 @@ import { NavLink } from "react-router-dom";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import "../styles/NavBar.css";
 
-export default function NavBar() {
+export default function NavBar({ user }) {
+  const profileLabel = user ? "Profile" : "Log In";
+
   return (
     <Navbar expand="md" className="sendit-navbar">
       <Container fluid className="navbar-inner">
@@ -34,6 +36,25 @@ export default function NavBar() {
               }
             >
               My Routes
+            </NavLink>
+            <NavLink
+              to="/profile"
+              className={({ isActive }) =>
+                isActive
+                  ? "nav-link nav-link-custom nav-link-profile active"
+                  : "nav-link nav-link-custom nav-link-profile"
+              }
+            >
+              {user ? (
+                <span className="profile-chip">
+                  <span className="profile-chip-avatar">
+                    {user.name.charAt(0).toUpperCase()}
+                  </span>
+                  <span>{profileLabel}</span>
+                </span>
+              ) : (
+                profileLabel
+              )}
             </NavLink>
           </Nav>
         </Navbar.Collapse>

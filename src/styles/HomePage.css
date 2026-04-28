@@ -100,7 +100,7 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 8px;
+  margin: 0 0 8px;
 }
 
 .features-grid {
@@ -137,7 +137,7 @@
   font-weight: 700;
   letter-spacing: 0.5px;
   color: var(--text);
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 }
 
 .feature-desc {
@@ -162,6 +162,7 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--muted);
+  margin: 0;
 }
 
 .hiw-steps {
